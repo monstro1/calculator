@@ -6,3 +6,5 @@ const divide = (a, b) => a / b;
 let firstNum;
 let secondNum;
 let operator;
+
+const operate = (a, b, op) => op(a, b);
