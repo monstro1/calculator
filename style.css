@@ -5,6 +5,10 @@
 }
 
 :root {
+	--calculator-bg: #000;
+	--btn-color-1: #fff;
+	--btn-color-2: #0cf;
+	--btn-color-3: #3f3;
 }
 
 html {
@@ -23,6 +27,14 @@ button {
 	font-size: 2rem;
 	padding: 16px 0;
 	font-family: inherit;
+	border: none;
+	border-radius: 8px;
+}
+
+#calculator {
+	background-color: var(--calculator-bg);
+	padding: 20px;
+	border-radius: 8px;
 }
 
 /* main grid layout */
@@ -30,9 +42,28 @@ button {
 	width: 720px;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
+	gap: 8px;
 }
 
 /* wide btns */
 #clear-btn, #zero-btn {
 	grid-column: 1 / 3;
+}
+
+/* button style 1 */
+.number-btn {
+	background-color: var(--btn-color-1);
+	color: var(--calculator-bg);
+}
+
+/* button style 2 */
+#clear-btn, #negative-btn {
+	background-color: var(--btn-color-2);
+	color: var(--btn-color-1);
+}
+
+/* button style 3 */
+.operator-btn, #equal-btn {
+	background-color: var(--btn-color-3);
+	color: var(--btn-color-1);
 }
