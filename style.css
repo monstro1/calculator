@@ -35,14 +35,18 @@ button {
 	background-color: var(--calculator-bg);
 	padding: 20px;
 	border-radius: 8px;
-}
-
-/* main grid layout */
-#btn-grid {
 	width: 720px;
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 8px;
+}
+
+/* text field styling */
+#text-field {
+	height: 64px;
+	grid-column: 1 / 5;
+	background-color: var(--btn-color-1);
+	border-radius: 8px;
 }
 
 /* wide btns */
