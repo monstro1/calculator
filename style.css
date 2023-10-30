@@ -14,3 +14,20 @@ body {
 	justify-content: center;
 	align-items: center;
 }
+
+button {
+	font-size: 2rem;
+	padding: 16px 0;
+}
+
+/* main grid layout */
+#btn-grid {
+	width: 720px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+/* wide btns */
+#clear-btn, #zero-btn {
+	grid-column: 1 / 3;
+}
