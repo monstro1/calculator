@@ -30,3 +30,7 @@ for (let i = 0; i < numberedButtons.length; i++) {
 		calcText += numberedButtons[i].textContent;
 	});
 }
+
+function updateText() {
+	document.querySelector("#text-field").textContent = calcText;
+}
