@@ -7,6 +7,7 @@ let firstNum;
 let secondNum;
 let operator;
 
+let calcBuffer = "";
 let calcText = "";
 
 const operate = (a, b, op) => op(a, b);
@@ -15,31 +16,32 @@ const numberedButtons = [...document.querySelectorAll(".number-btn")];
 
 for (let i = 0; i < numberedButtons.length; i++) {
 	numberedButtons[i].addEventListener("click", function() {
-		calcText += numberedButtons[i].textContent;
+		calcBuffer += numberedButtons[i].textContent;
 		updateText();
 	});
 }
 
 function updateText() {
-	if (calcText.length > 17) {
-		return;
+	if (calcBuffer.length > 17) {
+		calcBuffer = calcText;
 	} else {
-		document.querySelector("#text-field").textContent = calcText;
+		calcText = calcBuffer;
 	}
+	document.querySelector("#text-field").textContent = calcText;
 }
 
 const clearButton = document.querySelector("#clear-btn");
 clearButton.addEventListener("click", function() {
-	calcText = "";
+	calcBuffer = "";
 	updateText();
 });
 
 const negativeButton = document.querySelector("#negative-btn");
 negativeButton.addEventListener("click", function() {
-	if (calcText.charAt(0) === "-") {
-		calcText = calcText.substring(1);
+	if (calcBuffer.charAt(0) === "-") {
+		calcBuffer = calcBuffer.substring(1);
 	} else {
-		calcText = "-" + calcText;
+		calcBuffer = "-" + calcBuffer;
 	}
 	updateText();
 });
