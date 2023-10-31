@@ -28,7 +28,8 @@ function updateText() {
 	}
 }
 
-const clearButton = document.querySelector("#clear-btn").addEventListener("click", function() {
+const clearButton = document.querySelector("#clear-btn");
+clearButton.addEventListener("click", function() {
 	calcText = "";
 	updateText();
 });
