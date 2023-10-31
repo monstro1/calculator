@@ -33,3 +33,13 @@ clearButton.addEventListener("click", function() {
 	calcText = "";
 	updateText();
 });
+
+const negativeButton = document.querySelector("#negative-btn");
+negativeButton.addEventListener("click", function() {
+	if (calcText.charAt(0) === "-") {
+		calcText = calcText.substring(1);
+	} else {
+		calcText = "-" + calcText;
+	}
+	updateText();
+});
