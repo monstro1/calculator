@@ -45,3 +45,18 @@ negativeButton.addEventListener("click", function() {
 	}
 	updateText();
 });
+
+const addButton = document.querySelector("#add-btn");
+addButton.addEventListener("click", function() {
+	firstNum = +calcText;
+	operator = add;
+	calcBuffer = "";
+	updateText();
+});
+
+const equalButton = document.querySelector("#equal-btn");
+equalButton.addEventListener("click", function() {
+	secondNum = +calcText;
+	calcBuffer = operate(firstNum, secondNum, operator);
+	updateText();
+});
