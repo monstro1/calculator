@@ -19,5 +19,6 @@ const sevenButton = document.querySelector("#seven-btn");
 const eightButton = document.querySelector("#eight-btn");
 const nineButton = document.querySelector("#nine-btn");
 const zeroButton = document.querySelector("#zero-btn");
+const decimalButton = document.querySelector("#decimal-btn");
 
 const numberedButtons = [...document.querySelectorAll(".number-btn")];
