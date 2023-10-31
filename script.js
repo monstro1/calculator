@@ -33,7 +33,11 @@ for (let i = 0; i < numberedButtons.length; i++) {
 }
 
 function updateText() {
-	document.querySelector("#text-field").textContent = calcText;
+	if (calcText.length > 17) {
+		return;
+	} else {
+		document.querySelector("#text-field").textContent = calcText;
+	}
 }
 
 const clearButton = document.querySelector("#clear-btn").addEventListener("click", function() {
