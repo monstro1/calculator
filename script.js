@@ -7,6 +7,8 @@ let firstNum;
 let secondNum;
 let operator;
 
+let calcText = "";
+
 const operate = (a, b, op) => op(a, b);
 
 const oneButton = document.querySelector("#one-btn");
