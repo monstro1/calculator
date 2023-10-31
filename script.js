@@ -54,6 +54,30 @@ addButton.addEventListener("click", function() {
 	updateText();
 });
 
+const subtractButton = document.querySelector("#subtract-btn");
+subtractButton.addEventListener("click", function() {
+	firstNum = +calcText;
+	operator = subtract;
+	calcBuffer = "";
+	updateText();
+});
+
+const multiplyButton = document.querySelector("#multiply-btn");
+multiplyButton.addEventListener("click", function() {
+	firstNum = +calcText;
+	operator = multiply;
+	calcBuffer = "";
+	updateText();
+});
+
+const divideButton = document.querySelector("#divide-btn");
+divideButton.addEventListener("click", function() {
+	firstNum = +calcText;
+	operator = divide;
+	calcBuffer = "";
+	updateText();
+});
+
 const equalButton = document.querySelector("#equal-btn");
 equalButton.addEventListener("click", function() {
 	secondNum = +calcText;
