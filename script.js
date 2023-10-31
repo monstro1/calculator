@@ -24,3 +24,9 @@ const zeroButton = document.querySelector("#zero-btn");
 const decimalButton = document.querySelector("#decimal-btn");
 
 const numberedButtons = [...document.querySelectorAll(".number-btn")];
+
+for (let i = 0; i < numberedButtons.length; i++) {
+	numberedButtons[i].addEventListener("click", function() {
+		calcText += numberedButtons[i].textContent;
+	});
+}
