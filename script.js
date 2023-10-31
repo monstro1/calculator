@@ -38,7 +38,7 @@ clearButton.addEventListener("click", function() {
 
 const negativeButton = document.querySelector("#negative-btn");
 negativeButton.addEventListener("click", function() {
-	if (calcBuffer.charAt(0) === "-") {
+	if (calcBuffer.toString().charAt(0) === "-") {
 		calcBuffer = calcBuffer.substring(1);
 	} else {
 		calcBuffer = "-" + calcBuffer;
