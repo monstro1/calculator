@@ -8,10 +8,12 @@ const operate = (a, b, op) => op(a, b);
 const numberedButtons = [...document.querySelectorAll(".number-btn")];
 
 numberedButtons.forEach(button => {
-	button.addEventListener("click", () => {
-		console.log(button.textContent);
-	});
+	button.addEventListener("click", userInput);
 });
 
 const bigTextField = document.querySelector("#big-text");
 const smallTextField = document.querySelector("#small-text");
+
+function userInput(e) {
+	console.log(e.target.textContent);
+}
