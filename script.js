@@ -12,3 +12,6 @@ numberedButtons.forEach(button => {
 		console.log(button.textContent);
 	});
 });
+
+const bigTextField = document.querySelector("#big-text");
+const smallTextField = document.querySelector("#small-text");
