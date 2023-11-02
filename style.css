@@ -61,6 +61,7 @@ button {
 #big-text {
 	font-size: 1.25rem;
 	text-align: right;
+	word-break: break-all;
 }
 
 /* wide btns */
