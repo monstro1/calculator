@@ -50,7 +50,11 @@ function userInput(e) {
 		bigTextField.textContent = solution;
 		operator = null;
 	} else if (button.id === "negative-btn" && bigTextField.textContent.length > 0) {
-		bigTextField.textContent = "-" + bigTextField.textContent;
+		if (bigTextField.textContent.charAt(0) === "-") {
+			bigTextField.textContent = bigTextField.textContent.substring(1);
+		} else {
+			bigTextField.textContent = "-" + bigTextField.textContent;
+		}
 	} else {
 		bigTextField.textContent = "";
 		smallTextField.textContent = "";
