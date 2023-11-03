@@ -51,7 +51,10 @@ function userInput(e) {
 	} else if (button.id === "negative-btn") {
 		console.log("negative button");
 	} else {
-		console.log("clear button");
+		bigTextField.textContent = "";
+		smallTextField.textContent = "";
+		operator = null;
+		storedVal = null;
 	}
 	lastButton = button;
 }
