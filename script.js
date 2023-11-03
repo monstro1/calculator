@@ -23,7 +23,9 @@ function userInput(e) {
 	let button = e.target;
 	if (button.classList.contains("number-btn")) {
 		if (lastButton.classList.contains("number-btn") || lastButton.id === "negative-btn") {
-			bigTextField.textContent += button.textContent;
+			if (!(button.id === "decimal-btn" && bigTextField.textContent.indexOf(".") >= 0)) {
+				bigTextField.textContent += button.textContent;
+			}
 		} else {
 			bigTextField.textContent = button.textContent;
 		}
