@@ -69,7 +69,11 @@ function userInput(e) {
 }
 
 function pressEquals() {
-	let solution = operate(storedVal, +bigTextField.textContent, operator);
-	smallTextField.textContent = `${storedVal} ${lastOperator.textContent} ${bigTextField.textContent} =`
-	bigTextField.textContent = solution;
+	smallTextField.textContent = `${storedVal} ${lastOperator.textContent} ${+bigTextField.textContent} =`
+	if (+bigTextField.textContent === 0 && operator === divide) {
+		bigTextField.textContent = "ERROR: DIV BY 0";
+	} else {
+		let solution = operate(storedVal, +bigTextField.textContent, operator);
+		bigTextField.textContent = solution;
+	}
 }
