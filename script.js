@@ -42,6 +42,11 @@ function userInput(e) {
 				operator = divide;
 				break;
 		}
+		if (storedVal && !lastButton.classList.contains("operator-btn")) {
+			let solution = operate(storedVal, +bigTextField.textContent, operator);
+			smallTextField.textContent = `${storedVal} ${lastOperator.textContent} ${bigTextField.textContent} =`
+			bigTextField.textContent = solution;
+		}
 		storedVal = +bigTextField.textContent;
 		lastOperator = button;
 	} else if (button.id === "equal-btn" && operator && storedVal) {
