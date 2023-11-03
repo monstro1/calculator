@@ -17,7 +17,7 @@ const smallTextField = document.querySelector("#small-text");
 function userInput(e) {
 	let button = e.target;
 	if (button.classList.contains("number-btn")) {
-		console.log("number button");
+		bigTextField.textContent += button.textContent;
 	} else if (button.classList.contains("operator-btn")) {
 		console.log("operator button");
 	} else {
