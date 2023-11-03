@@ -14,7 +14,7 @@ buttons.forEach(button => {
 const bigTextField = document.querySelector("#big-text");
 const smallTextField = document.querySelector("#small-text");
 
-let lastButton;
+let lastButton = document.querySelector("#clear-btn");
 let operator;
 
 function userInput(e) {
