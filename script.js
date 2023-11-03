@@ -49,6 +49,7 @@ function userInput(e) {
 		smallTextField.textContent = `${storedVal} ${lastOperator.textContent} ${bigTextField.textContent} =`
 		bigTextField.textContent = solution;
 		operator = null;
+		storedVal = null;
 	} else if (button.id === "negative-btn" && bigTextField.textContent.length > 0) {
 		if (bigTextField.textContent.charAt(0) === "-") {
 			bigTextField.textContent = bigTextField.textContent.substring(1);
