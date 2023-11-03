@@ -44,10 +44,11 @@ function userInput(e) {
 		}
 		storedVal = +bigTextField.textContent;
 		lastOperator = button;
-	} else if (button.id === "equal-btn") {
+	} else if (button.id === "equal-btn" && operator && storedVal) {
 		let solution = operate(storedVal, +bigTextField.textContent, operator);
 		smallTextField.textContent = `${storedVal} ${lastOperator.textContent} ${bigTextField.textContent} =`
 		bigTextField.textContent = solution;
+		operator = null;
 	} else if (button.id === "negative-btn") {
 		console.log("negative button");
 	} else {
