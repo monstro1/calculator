@@ -42,8 +42,12 @@ function userInput(e) {
 				break;
 		}
 		storedVal = +bigTextField.textContent;
+	} else if (button.id === "equal-btn") {
+		console.log("equal button");
+	} else if (button.id === "negative-btn") {
+		console.log("negative button");
 	} else {
-		console.log("some other button");
+		console.log("clear button");
 	}
 	lastButton = button;
 }
