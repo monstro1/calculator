@@ -44,12 +44,12 @@ function userInput(e) {
 				operator = divide;
 				break;
 		}
-		if (storedVal && !lastButton.classList.contains("operator-btn")) {
+		if ((storedVal || storedVal === 0) && !lastButton.classList.contains("operator-btn")) {
 			pressEquals();
 		}
 		storedVal = +bigTextField.textContent;
 		lastOperator = button;
-	} else if (button.id === "equal-btn" && operator && storedVal) {
+	} else if (button.id === "equal-btn" && operator && (storedVal || storedVal === 0)) {
 		pressEquals();
 		operator = null;
 		storedVal = null;
