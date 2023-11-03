@@ -16,6 +16,7 @@ const smallTextField = document.querySelector("#small-text");
 
 let lastButton = document.querySelector("#clear-btn");
 let operator;
+let storedVal;
 
 function userInput(e) {
 	let button = e.target;
@@ -40,6 +41,7 @@ function userInput(e) {
 				operator = divide;
 				break;
 		}
+		storedVal = +bigTextField.textContent;
 	} else {
 		console.log("some other button");
 	}
