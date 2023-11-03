@@ -45,16 +45,12 @@ function userInput(e) {
 				break;
 		}
 		if (storedVal && !lastButton.classList.contains("operator-btn")) {
-			let solution = operate(storedVal, +bigTextField.textContent, operator);
-			smallTextField.textContent = `${storedVal} ${lastOperator.textContent} ${bigTextField.textContent} =`
-			bigTextField.textContent = solution;
+			pressEquals();
 		}
 		storedVal = +bigTextField.textContent;
 		lastOperator = button;
 	} else if (button.id === "equal-btn" && operator && storedVal) {
-		let solution = operate(storedVal, +bigTextField.textContent, operator);
-		smallTextField.textContent = `${storedVal} ${lastOperator.textContent} ${bigTextField.textContent} =`
-		bigTextField.textContent = solution;
+		pressEquals();
 		operator = null;
 		storedVal = null;
 	} else if (button.id === "negative-btn" && bigTextField.textContent.length > 0) {
@@ -70,4 +66,10 @@ function userInput(e) {
 		storedVal = null;
 	}
 	lastButton = button;
+}
+
+function pressEquals() {
+	let solution = operate(storedVal, +bigTextField.textContent, operator);
+	smallTextField.textContent = `${storedVal} ${lastOperator.textContent} ${bigTextField.textContent} =`
+	bigTextField.textContent = solution;
 }
