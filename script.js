@@ -14,12 +14,27 @@ buttons.forEach(button => {
 const bigTextField = document.querySelector("#big-text");
 const smallTextField = document.querySelector("#small-text");
 
+let operator;
+
 function userInput(e) {
 	let button = e.target;
 	if (button.classList.contains("number-btn")) {
 		bigTextField.textContent += button.textContent;
 	} else if (button.classList.contains("operator-btn")) {
-		console.log("operator button");
+		switch(button.id) {
+			case "add-btn":
+				operator = add;
+				break;
+			case "subtract-btn":
+				operator = subtract;
+				break;
+			case "multiply-btn":
+				operator = multiply;
+				break;
+			default:
+				operator = divide;
+				break;
+		}
 	} else {
 		console.log("some other button");
 	}
