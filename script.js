@@ -18,6 +18,8 @@ function userInput(e) {
 	let button = e.target;
 	if (button.classList.contains("number-btn")) {
 		console.log("number button");
+	} else if (button.classList.contains("operator-btn")) {
+		console.log("operator button");
 	} else {
 		console.log("some other button");
 	}
