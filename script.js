@@ -14,6 +14,7 @@ buttons.forEach(button => {
 const bigTextField = document.querySelector("#big-text");
 const smallTextField = document.querySelector("#small-text");
 
+let lastButton;
 let operator;
 
 function userInput(e) {
@@ -38,4 +39,5 @@ function userInput(e) {
 	} else {
 		console.log("some other button");
 	}
+	lastButton = button;
 }
