@@ -20,7 +20,11 @@ let operator;
 function userInput(e) {
 	let button = e.target;
 	if (button.classList.contains("number-btn")) {
-		bigTextField.textContent += button.textContent;
+		if (lastButton.classList.contains("number-btn")) {
+			bigTextField.textContent += button.textContent;
+		} else {
+			bigTextField.textContent = button.textContent;
+		}
 	} else if (button.classList.contains("operator-btn")) {
 		switch(button.id) {
 			case "add-btn":
