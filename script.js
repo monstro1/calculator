@@ -22,7 +22,7 @@ let storedVal;
 function userInput(e) {
 	let button = e.target;
 	if (button.classList.contains("number-btn")) {
-		if (lastButton.classList.contains("number-btn")) {
+		if (lastButton.classList.contains("number-btn") || lastButton.id === "negative-btn") {
 			bigTextField.textContent += button.textContent;
 		} else {
 			bigTextField.textContent = button.textContent;
@@ -49,8 +49,8 @@ function userInput(e) {
 		smallTextField.textContent = `${storedVal} ${lastOperator.textContent} ${bigTextField.textContent} =`
 		bigTextField.textContent = solution;
 		operator = null;
-	} else if (button.id === "negative-btn") {
-		console.log("negative button");
+	} else if (button.id === "negative-btn" && bigTextField.textContent.length > 0) {
+		bigTextField.textContent = "-" + bigTextField.textContent;
 	} else {
 		bigTextField.textContent = "";
 		smallTextField.textContent = "";
