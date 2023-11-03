@@ -15,6 +15,7 @@ const bigTextField = document.querySelector("#big-text");
 const smallTextField = document.querySelector("#small-text");
 
 let lastButton = document.querySelector("#clear-btn");
+let lastOperator;
 let operator;
 let storedVal;
 
@@ -42,6 +43,7 @@ function userInput(e) {
 				break;
 		}
 		storedVal = +bigTextField.textContent;
+		lastOperator = button;
 	} else if (button.id === "equal-btn") {
 		console.log("equal button");
 	} else if (button.id === "negative-btn") {
