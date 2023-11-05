@@ -74,6 +74,11 @@ function pressEquals() {
 		bigTextField.textContent = "ERROR: DIV BY 0";
 	} else {
 		let solution = operate(storedVal, +bigTextField.textContent, operator);
+		if (solution.toString().includes(".")) {
+			if (solution.toString().split(".")[1].length > 10) {
+				solution = solution.toFixed(10);
+			}
+		}
 		bigTextField.textContent = solution;
 	}
 }
