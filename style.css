@@ -33,6 +33,10 @@ button {
 	cursor: pointer;
 }
 
+button:active {
+	filter: brightness(150%);
+}
+
 #calculator {
 	background-color: var(--calculator-bg);
 	padding: 20px;
