@@ -30,6 +30,9 @@ function userInput(e) {
 			bigTextField.textContent = button.textContent;
 		}
 	} else if (button.classList.contains("operator-btn")) {
+		if ((storedVal || storedVal === 0) && !lastButton.classList.contains("operator-btn")) {
+			pressEquals();
+		}
 		switch(button.id) {
 			case "add-btn":
 				operator = add;
@@ -43,9 +46,6 @@ function userInput(e) {
 			default:
 				operator = divide;
 				break;
-		}
-		if ((storedVal || storedVal === 0) && !lastButton.classList.contains("operator-btn")) {
-			pressEquals();
 		}
 		storedVal = +bigTextField.textContent;
 		lastOperator = button;
