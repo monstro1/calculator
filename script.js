@@ -77,6 +77,9 @@ function pressEquals() {
 		if (solution.toString().includes(".")) {
 			if (solution.toString().split(".")[1].length > 10) {
 				solution = solution.toFixed(10);
+				while (solution.charAt(solution.length - 1) === "0" || solution.charAt(solution.length - 1) === ".") {
+					solution = solution.substring(0, solution.length - 1);
+				}
 			}
 		}
 		bigTextField.textContent = solution;
